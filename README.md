@@ -29,10 +29,8 @@ pip install -r requirements.txt
 ```
 
 ### 2) Add API keys
-Copy `.env.example` → `.env` and fill in your keys:
-```bash
-cp .env.example .env
-```
+fill in your keys in a .env file:
+
 
 ### 3) Start Postgres + pgvector (for the RAG notebook)
 ```bash
@@ -40,9 +38,6 @@ docker compose up -d
 ```
 
 ### 4) Run notebooks
-```bash
-jupyter lab
-```
 
 ## Running in Google Colab
 You can use the notebooks in Colab, but **Docker/pgvector won't run** in standard Colab runtimes.  
@@ -52,7 +47,3 @@ For the RAG notebook, either:
 
 ## Security
 - Never commit `.env`. It's already in `.gitignore`.
-- Rotate keys if you accidentally leak them.
-
-## License
-MIT (see `LICENSE`)
